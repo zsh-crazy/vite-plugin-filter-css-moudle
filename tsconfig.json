@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "moduleResolution": "node",
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "allowJs": true,
+    "strict": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "declarationDir": "dist/types",
+    "outDir": "dist",
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node"]
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules"]
+}

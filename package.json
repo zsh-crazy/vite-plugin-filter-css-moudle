@@ -1,0 +1,49 @@
+{
+  "name": "vite-plugin-filter-css-moudle",
+  "version": "1.0.0",
+  "description": "解决vite中react和preact 处理不同目录cssmodule的不同配置问题，并且省略文件名中的.module",
+  "main": "dist/index.js",
+  "module": "dist/index-esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rollup -c rollup.config.js --watch",
+    "build": "cross-env NODE_ENV=production rollup -c"
+  },
+  "keywords": [
+    "react",
+    "preact",
+    "vite",
+    "css module",
+    "oneOf",
+    "scss",
+    "css",
+    "sass"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zsh-crazy/vite-plugin-filter-css-moudle.git"
+  },
+  "author": "crazy-code",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/pluginutils": "^4.2.1",
+    "@types/node": "^18.7.19",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "postcss": "^8.4.16",
+    "postcss-modules": "^5.0.0",
+    "rollup": "^2.79.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-typescript2": "^0.34.0",
+    "typescript": "^4.8.3",
+    "vite": "^3.1.3"
+  },
+  "peerDependencies": {
+    "vite": "^3.1.0"
+  }
+}
