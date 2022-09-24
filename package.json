@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-filter-css-moudle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "解决vite中react和preact 处理不同目录cssmodule的不同配置问题，并且省略文件名中的.module",
   "main": "dist/index.js",
   "module": "dist/index-esm.js",
