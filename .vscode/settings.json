@@ -10,5 +10,13 @@
     "extensions": [".js", ".ts", ".tsx"]
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "typescript.updateImportsOnFileMove.enabled": "prompt"
+  "typescript.updateImportsOnFileMove.enabled": "prompt",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }

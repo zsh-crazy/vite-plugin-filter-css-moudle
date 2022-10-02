@@ -6,7 +6,6 @@ export interface CSSModulesOptions {
   globalModulePaths?: RegExp[];
   generateScopedName: string | ((name: string, filename: string, css: string) => string);
   hashPrefix?: string;
-
   localsConvention?: 'camelCase' | 'camelCaseOnly' | 'dashes' | 'dashesOnly' | null;
 }
 
@@ -15,7 +14,7 @@ export interface oneOfModulesType {
   modules?: CSSModulesOptions;
   plugins?: any[];
 }
-export const isCssModule = (fileUrl: string, list): oneOfModulesType | void => {
+export const isCssModule = (fileUrl: string, list: any[]): oneOfModulesType | void => {
   if (Array.isArray(list) && list.length) {
     const item = list.find((el) => el.test.test(fileUrl));
     return item;
@@ -58,13 +57,13 @@ export const compileCSS = async (
   });
   return {
     ast: postcssResult,
-    modules,
+    modules: modules ? modules : {},
     code: postcssResult.css,
     messages: postcssResult.messages,
   };
 };
 
-export const getUpdateList = (modules) => {
+export const getUpdateList = (modules: Set<ModuleNode> | ModuleNode[]) => {
   const jsFileReg = /(.jsx?|.tsx?)$/;
   const updates: Update[] = [];
   const loopFn = (modules: Set<ModuleNode> | ModuleNode[]) => {
